@@ -1,5 +1,4 @@
 {
   "singleQuote": true,
-  "parser": "flow",
-  "endOfLine": "lf"
+  "parser": "flow"
 }
