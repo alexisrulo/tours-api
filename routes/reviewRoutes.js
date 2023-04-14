@@ -9,7 +9,7 @@ router
     authController.protect,
     authController.restrictTo('user'),
     reviewController.createReview
-  ); 
+  );
 
 router.route('/:id').get(authController.protect, reviewController.getReview);
 
