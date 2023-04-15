@@ -3,7 +3,11 @@ const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/AppError');
 
 exports.getAllReviews = catchAsync(async (req, res, next) => {
-  const reviews = await Review.find();
+  const filter = {};
+
+  if (req.params.tourId) filter.tour = req.params.tourId;
+
+  const reviews = await Review.find(filter);
 
   if (reviews.length === 0) {
     next(new AppError('There are not reviews'));
