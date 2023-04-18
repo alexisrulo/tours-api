@@ -82,3 +82,4 @@ exports.updateUser = (req, res) => {
 };
 
 exports.deleteUser = factory.deleteOne(User);
+exports.updateUser = factory.updateOne(User);
